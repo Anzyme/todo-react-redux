@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { Footer, Header } from './components'
+import { AddTodoForm, TodoList, TotalCompletedItems } from './features/todolist/components';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Header />
+      <div className="container bg-white p-4 mt-5">
+        <h1 className="h1">Listes des tâches à effectuer</h1>
+      <AddTodoForm />
+      <TodoList />
+      <TotalCompletedItems />
+      <Footer />
+      </div>
+    </>
+  )
 }
 
-export default App;
+export default App
