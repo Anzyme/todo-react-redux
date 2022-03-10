@@ -16,8 +16,8 @@ export default function TodoItem({ id, title, completed }) {
   }
 
   return (
-    <li className='list-group-item'>
-      <div className="d-flex justify-content-between">
+    <li className={ completed ? 'list-group-item bg-green-500' : 'list-group-item'}>
+      <div className="d-flex justify-content-between ">
         <span className='d-flex align-items-center'>
           <input type='checkbox' className="mr-3 form-check-input" checked={completed} onChange={handleCompleteClick}/>
           {title}
